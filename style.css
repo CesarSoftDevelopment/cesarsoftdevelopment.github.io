@@ -1,0 +1,232 @@
+/* CesarSoftDevelopment — estilos do site do desenvolvedor */
+
+:root {
+  color-scheme: light dark;
+
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --text: #1a1d21;
+  --text-muted: #565b63;
+  --border: #e2e5ea;
+  --accent: #2563eb;
+  --accent-contrast: #ffffff;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 6px 20px rgba(0, 0, 0, 0.04);
+  --radius: 14px;
+  --max-width: 960px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1115;
+    --surface: #181b21;
+    --text: #eef0f3;
+    --text-muted: #a3a9b4;
+    --border: #2a2e37;
+    --accent: #3b82f6;
+    --accent-contrast: #ffffff;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Cabeçalho */
+.site-header {
+  padding: 56px 0 40px;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  letter-spacing: -0.02em;
+}
+
+.site-header .tagline {
+  margin: 0 auto;
+  max-width: 620px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* Seções */
+.section {
+  padding: 28px 0;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin: 0 0 24px;
+  letter-spacing: -0.01em;
+}
+
+/* Grid de apps */
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.app-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.app-card__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.app-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.app-card__name {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.app-card__desc {
+  margin: 0 0 20px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  flex: 1 1 auto;
+}
+
+/* Botões / rótulos */
+.btn {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: opacity 0.15s ease, transform 0.05s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.badge-soon {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: var(--border);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Contato */
+.contact a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+.site-footer {
+  margin-top: 32px;
+  padding: 28px 0 40px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Conteúdo de texto (política de privacidade) */
+.prose {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.prose h1 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  letter-spacing: -0.02em;
+}
+
+.prose h2 {
+  margin-top: 32px;
+  font-size: 1.25rem;
+}
+
+.prose a {
+  color: var(--accent);
+}
+
+.prose .updated {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Acessibilidade: foco visível */
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 40px 0 28px;
+  }
+}

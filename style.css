@@ -58,6 +58,17 @@ body {
   text-align: center;
 }
 
+.site-header .avatar {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 18px;
+  display: block;
+  border: 3px solid var(--surface);
+  box-shadow: var(--shadow);
+}
+
 .site-header h1 {
   margin: 0 0 10px;
   font-size: clamp(1.8rem, 5vw, 2.6rem);

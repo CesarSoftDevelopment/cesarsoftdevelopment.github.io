@@ -11,7 +11,7 @@ o arquivo `app-ads.txt` do Google AdMob.
 - `style.css` — estilos (claro/escuro, responsivo).
 - `app-ads.txt` — arquivo do AdMob (deve ficar na raiz do domínio).
 - `assets/` — ícones dos apps. Coloque aqui um **PNG quadrado (recomendado 512×512)**
-  para cada app, com os nomes: `trilho-alerta-sp.png`, `world-flags.png`, `controdata.png`,
+  para cada app, com os nomes: `world-flags.png`, `controdata.png`,
   `viva-sampa.png`, `pomo-time.png` e `http-codes-with-dogs.png`. Há um `icon-placeholder.svg`
   de exemplo que pode ser removido depois.
 
